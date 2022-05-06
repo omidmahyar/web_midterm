@@ -1,0 +1,171 @@
+
+/*بدنه اصلی سایت است که برای آن background در نظر پرفته شده که این background کل صفحه را پوشش میدهد تکرار نشده و از عکسی استفاده میکند
+در بدنه اصلی تنظیم شده است که itemها در وسط قرار گیرند*/
+body{
+    background-image: url("../img/Starwars.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+/*ظرفی برای قرار دادن content است*/
+#container {
+    width: 50%;
+    display: flex;
+    align-items: center;
+}
+
+/*کامپوننت اصلی صفحه است که در اینجا مکان قرار گیری آن ، میزان شفافیت و رنگ و گردی گوشه ها و reletive بودن مکان این کامپوننت مشخص شده است */
+#content {
+    margin-top: 75px;
+    width: 750px;
+    height: 500px;
+    border-radius: 50px;
+    opacity: .85;
+    position: relative;
+    background-color: rgba(2, 25, 63, 0.87);
+    color: rgba(255, 172, 0, 0.87);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+/*مشخصات هدر ها را تعیین میکند
+این مشخصات شامل ساز متن و رنگ متن و پدینگ چپ و بالا است*/
+header{
+    font-size: 35px;
+    color: rgba(166, 0, 0, 0.87);
+    padding-left: 40px;
+    padding-top: 20px;
+}
+
+
+/* برای همه دکمه از این مشخصات استفده شده است که شامل بیرنگ بودن پس زمینه دکمه ها و رنگ متن آنها و رنگ حاشیه است */
+button {
+    background-color: transparent;
+    color:  rgba(255, 172, 0, 0.87);
+    border:  rgba(255, 172, 0, 0.87);
+    padding: 6px;
+}
+
+/*کامپوننت اصلی حاوی ستون هایی است که همه ستون ها در در all-colum اضافه میشوند و برای نماش به صورت سوتونی استفاده میشود*/
+#all-column {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+/*
+ستون های قبلی شامل دو ستون starship-data و starships-name است که مشخصات آنها را در دو بخش تعین کرده ایم
+*/
+#starship-data {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+#starships-name {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+/*
+هر starship یک دکمه نیز باید باشد که در صورت کلیک مشخصات ان نمایش داده شود
+مشخصات این کلید ها در starships-name-btn مشخص شده است
+که شامل رنگ و pading و بی رنگ بودن پس زمینه میباشد
+*/
+.starships-name-btn {
+    background-color: transparent;
+    color:  rgba(255, 172, 0, 0.87);
+    border:  rgba(255, 172, 0, 0.87);
+    padding: 6px;
+}
+
+/*نحوه نمایش مشخصات starship ها را تعیین میکند*/
+.key-span {
+    padding: 10px;
+}
+
+/*
+نحوه نمایش هر مشخصات هر starship را تعیین میکند
+*/
+.item-div {
+    display: flex;
+    align-items: first baseline;
+    width: 100%;
+}
+
+/* each starship-name is in a li with class starship-name-li*/
+.starship-list {
+    width: 100%;
+    padding: 10px;
+
+}
+
+/* starship button in first page */
+.Starshipbutton {
+    width: 50%;
+}
+
+/*برای وقتی که دکمه های next یاprev کلیک شدن ندارن آنها را کم رنگ میکند
+ */
+button[disabled] {
+    cursor: not-allowed;
+    opacity: 0.25;
+}
+
+/*
+دکمه های starship در صفحه اول
+*/
+.mydiv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+}
+
+/*
+کامپوننت هایی که اسامی فیلم ها را در صفحه اول نمایش میدهند
+*/
+.movie-divs {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+pre {
+    font-size: 15px;
+    width: 50%;
+}
+
+#pageWrapper {
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+
+}
+
+.pages-div {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+label {
+    padding: 5px;
+    margin: 5px
+
+}
+
+/* تغییر رنگ دکمه ها وقتی موس روی آنها می آید */
+button:hover {
+    background-color:rgba(255, 172, 0, 0.87);
+    color: #000;
+}
+
+
+.activated {
+    color: rgba(255, 172, 0, 0.87);
+}
